@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #fff8f0;
+  background: linear-gradient(135deg, #ffe3e3 0%, #fff8f0 50%, #b2f7ef 100%);
   color: #333;
 }
 
@@ -19,10 +19,17 @@ header {
   padding: 1rem 2rem;
 }
 .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-right: 0.5rem;
+  border: 3px solid #f67280;
 }
 .nav-links {
   list-style: none;
@@ -40,22 +47,27 @@ header {
 }
 
 .hero {
-  background: linear-gradient(120deg, #f67280 0%, #ffb347 100%);
+  background: linear-gradient(120deg, #f67280 0%, #ffb347 50%, #b2f7ef 100%);
   color: #fff;
   text-align: center;
   padding: 4rem 1rem 3rem 1rem;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 0 8px 32px rgba(246, 114, 128, 0.10);
 }
 .hero-content h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px #f67280aa;
 }
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
 .cta-btn {
-  background: #fff;
-  color: #f67280;
+  background: linear-gradient(90deg, #ffb347 0%, #f67280 100%);
+  color: #fff;
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 30px;
@@ -63,24 +75,28 @@ header {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #f6728033;
 }
 .cta-btn:hover {
-  background: #f67280;
+  background: linear-gradient(90deg, #f67280 0%, #ffb347 100%);
   color: #fff;
+  box-shadow: 0 4px 16px #ffb34755;
 }
 
 .about, .products, .contact {
   max-width: 900px;
   margin: 2.5rem auto;
   padding: 1.5rem;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 16px rgba(246, 114, 128, 0.07);
+  background: #fff8f0cc;
+  border-radius: 24px;
+  box-shadow: 0 2px 16px #b2f7ef33;
+  margin-top: 2.5rem;
 }
 .about h2, .products h2, .contact h2 {
   color: #f67280;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
 }
 
 .product-list {
@@ -90,16 +106,18 @@ header {
   justify-content: center;
 }
 .product-card {
-  background: #fff8f0;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(255, 179, 71, 0.08);
+  background: linear-gradient(135deg, #fff8f0 60%, #b2f7ef 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #ffb34722;
   padding: 1rem;
   width: 220px;
   text-align: center;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #f6728011;
 }
 .product-card:hover {
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 24px #f6728033;
 }
 .product-card img {
   width: 100%;
@@ -107,8 +125,7 @@ header {
   margin-bottom: 0.7rem;
 }
 .product-card h3 {
-  margin: 0.5rem 0 0.3rem 0;
-  color: #ffb347;
+  color: #f67280;
 }
 
 .contact form {
@@ -124,18 +141,20 @@ header {
   resize: none;
 }
 .contact button {
-  background: #f67280;
+  background: linear-gradient(90deg, #f67280 0%, #ffb347 100%);
   color: #fff;
-  border: none;
-  padding: 0.9rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
   font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #b2f7ef33;
 }
 .contact button:hover {
-  background: #ffb347;
+  background: linear-gradient(90deg, #ffb347 0%, #f67280 100%);
+  box-shadow: 0 4px 16px #f6728033;
 }
 #formMessage {
   margin-top: 0.5rem;
@@ -146,11 +165,13 @@ header {
 footer {
   text-align: center;
   padding: 1.2rem 0;
-  background: #ffb347;
+  background: linear-gradient(90deg, #ffb347 0%, #f67280 100%);
   color: #fff;
   margin-top: 2rem;
   font-size: 1rem;
   letter-spacing: 1px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 @media (max-width: 700px) {
